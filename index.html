@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <main class="main">
+        <section class="urna">
+            <div class="tela">
+                <div class="res">
+                    
+                </div>
+            </div>
+            <div class="teclado">
+                <div class="nums">
+                    <button class="b7" onclick="btn7()">7</button>
+                    <button class="b8" onclick="btn8()">8</button>
+                    <button class="b9" onclick="btn9()">9</button>
+                    <button class="b4" onclick="btn4()">4</button>
+                    <button class="b5" onclick="btn5()">5</button>
+                    <button class="b6" onclick="btn6()">6</button>
+                    <button class="b1" onclick="btn1()">1</button>
+                    <button class="b2" onclick="btn2()">2</button>
+                    <button class="b3" onclick="btn3()">3</button>
+                    <button class="b0" onclick="btn0()">0</button>
+                </div>
+                <div class="menu">
+                    <button class="white" onclick="whiteVote()"></button>
+                    <button class="decline" onclick="clean()"></button>
+                    <button class="confirm" onclick="submit()"></button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <audio class="audio" src="./assets/somDaUrna.wav"></audio>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
