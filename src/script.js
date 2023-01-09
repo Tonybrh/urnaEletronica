@@ -2,8 +2,10 @@ const b2 = document.querySelector(".b2")
 const confirm = document.querySelector(".confirm")
 const decline = document.querySelector(".decline")
 const white = document.querySelector("white")
-const div = document.querySelector(".res")
+let div = document.querySelector(".res")
 const som = document.querySelector(".audio")
+const feijaoPuro = document.querySelector(".feijaoPuro")
+const votaVota = document.querySelector(".votaVota")
 let img = ""
 let res = document.querySelector(".res")
 let voto = ""
@@ -37,15 +39,18 @@ function btn9(){
 }
 
 function submit(){
-    
-    if(voto === "22"){
-        som.play()
+    console.log(res.children.length)
+
+
+    if(div.children.length == 0){
+        if(voto === "22"){
+        votaVota.play()
         img = document.createElement("img")
         img.src = ("./assets/img/bolsonaro.jpg")
         img.classList.add("img")
         div.appendChild(img)
     }else if(voto === "13"){
-        som.play()
+        feijaoPuro.play()
         img = document.createElement("img")
         img.src = ("./assets/img/lula.jpg")
         img.classList.add("img")
@@ -57,12 +62,19 @@ function submit(){
         img.classList.add("img")
         div.appendChild(img)
     }
+    }
 
+    
 }
 function clean(){
     voto = ""
-    
-    res.removeChild(img)
+   if(div.children.length != 0 ){
+    div.removeChild(img)
+   }
+   res.innerHTML = ""
+   feijaoPuro.pause()
+   votaVota.pause()
+
 }
 function whiteVote(){
     res.innerHTML = "Você votou branco"
