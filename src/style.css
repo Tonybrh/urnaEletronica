@@ -119,3 +119,9 @@
         width: 82%;
     }
 }
+
+@media only screen and (max-width: 950px ){
+    .urna{
+        width: 95%;
+    }
+}
